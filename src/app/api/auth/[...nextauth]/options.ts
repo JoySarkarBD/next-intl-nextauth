@@ -16,7 +16,6 @@ import VK from "next-auth/providers/vk";
 import WordPress from "next-auth/providers/wordpress";
 import Zoom from "next-auth/providers/zoom";
 
-// Define an array of any object type
 const users: any[] = [
   {
     id: 1,
@@ -137,18 +136,11 @@ const options: NextAuthOptions = {
   },
   callbacks: {
     async jwt({ token, user }) {
-      // JWT callback to add custom data to token
-      if (user) {
-        token.role = user.role;
-        token.id = user.id;
-      }
-      return token;
+      return { ...token, ...user };
     },
     async session({ session, token }) {
-      // Session callback to add custom data to session
-      if (session.user) {
-        session.user.role = token.role;
-        session.user.id = token.id;
+      if (token) {
+        session.user = token as any;
       }
       return session;
     },
