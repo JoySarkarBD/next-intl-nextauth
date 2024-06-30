@@ -1,0 +1,73 @@
+{
+  "Navbar": {
+    "home": "হোম",
+    "blog": "ব্লগ",
+    "about": "আমাদের সম্পর্কে",
+    "adminPage": "অ্যাডমিন পেজ",
+    "login": "লগিন",
+    "register": "রেজিস্টার",
+    "logout": "লগআউট"
+  },
+  "Index": {
+    "title": "নেক্সট.জেএস আন্তর্জাতিকীকরণে স্বাগতম",
+    "description": "এটি নেক্সট.জেএসে আন্তর্জাতিকীকরণের জন্য next-intl এর একটি সাধারণ উদাহরণ।"
+  },
+  "AboutPage": {
+    "title": "আমাদের সম্পর্কে",
+    "missionTitle": "আমাদের মিশন",
+    "missionDescription": "আমাদের মিশন হল আমাদের গ্রাহকদের সর্বোত্তম পরিষেবা প্রদান করা।",
+    "visionTitle": "আমাদের দৃষ্টি",
+    "visionDescription": "আমাদের দৃষ্টি হল আমাদের শিল্পে শীর্ষস্থানীয় সরবরাহকারী হওয়া।",
+    "teamTitle": "দলটি পরিচিতি",
+    "teamMember1Name": "এলিস জনসন",
+    "teamMember1Role": "সিইও",
+    "teamMember2Name": "বব স্মিথ",
+    "teamMember2Role": "সিটিও",
+    "teamMember3Name": "চার্লি ডেভিস",
+    "teamMember3Role": "সিওও",
+    "contactTitle": "যোগাযোগ করুন",
+    "contactDescription": "যেকোনো জিজ্ঞাসার জন্য, দয়া করে আমাদের সাথে যোগাযোগ করুন contact@example.com এ।"
+  },
+  "BlogPage": {
+    "title": "ব্লগ",
+    "post1Title": "প্রথম ব্লগ পোস্ট",
+    "post1Excerpt": "এটি প্রথম ব্লগ পোস্টের একটি সংক্ষিপ্ত অংশ।",
+    "post2Title": "দ্বিতীয় ব্লগ পোস্ট",
+    "post2Excerpt": "এটি দ্বিতীয় ব্লগ পোস্টের একটি সংক্ষিপ্ত অংশ।",
+    "readMore": "আরও পড়ুন",
+    "backToBlog": "ব্লগ পেজে ফিরে যান"
+  },
+  "AdminPage": {
+    "title": "অ্যাডমিন ড্যাশবোর্ড",
+    "userManagement": "ব্যবহারকারী ব্যবস্থাপনা",
+    "postManagement": "পোস্ট ব্যবস্থাপনা",
+    "settings": "সেটিংস",
+    "manageUsers": "ব্যবহারকারীদের পরিচালনা করুন",
+    "managePosts": "পোস্ট পরিচালনা করুন",
+    "siteSettings": "সাইট সেটিংস"
+  },
+  "AccessDeniedPage": {
+    "title": "তুই শালা ভাগ"
+  },
+  "RegisterPage": {
+    "title": "একটি অ্যাকাউন্ট তৈরি করুন",
+    "username": "ব্যবহারকারীর নাম",
+    "password": "পাসওয়ার্ড",
+    "confirmPassword": "পাসওয়ার্ড নিশ্চিত করুন",
+    "register": "নিবন্ধন করুন",
+    "error": "ত্রুটি"
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "ভাষা পরিবর্তন করুন"
+  },
+  "NotFound": {
+    "title": "৪০৪ পৃষ্ঠাটি পাওয়া যায়নি",
+    "pageDescription": "ওহো! আপনি যে পৃষ্ঠাটি খুঁজছেন সেটি বিদ্যমান নেই।",
+    "goBackHome": "হোম পেজে ফিরে যান"
+  },
+  "AccessDenied": {
+    "title": "প্রবেশ নিষিদ্ধ",
+    "message": "আপনার এই পৃষ্ঠায় প্রবেশের অনুমতি নেই।",
+    "homeLink": "মূল পৃষ্ঠায় যান"
+  }
+}

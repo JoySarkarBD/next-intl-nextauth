@@ -1,0 +1,73 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About",
+    "adminPage": "Admin Page",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "Index": {
+    "title": "Welcome to Next.js Internationalization",
+    "description": "This is a simple example of using next-intl for internationalization in Next.js."
+  },
+  "AboutPage": {
+    "title": "About Us",
+    "missionTitle": "Our Mission",
+    "missionDescription": "Our mission is to provide the best services to our customers.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "Our vision is to be the leading provider in our industry.",
+    "teamTitle": "Meet the Team",
+    "teamMember1Name": "Alice Johnson",
+    "teamMember1Role": "CEO",
+    "teamMember2Name": "Bob Smith",
+    "teamMember2Role": "CTO",
+    "teamMember3Name": "Charlie Davis",
+    "teamMember3Role": "COO",
+    "contactTitle": "Contact Us",
+    "contactDescription": "For any inquiries, please reach out to us at contact@example.com."
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "post1Title": "First Blog Post",
+    "post1Excerpt": "This is a brief excerpt from the first blog post.",
+    "post2Title": "Second Blog Post",
+    "post2Excerpt": "This is a brief excerpt from the second blog post.",
+    "readMore": "Read More",
+    "backToBlog": "Back To Blog Page"
+  },
+  "AdminPage": {
+    "title": "Admin Dashboard",
+    "userManagement": "User Management",
+    "postManagement": "Post Management",
+    "settings": "Settings",
+    "manageUsers": "Manage Users",
+    "managePosts": "Manage Posts",
+    "siteSettings": "Site Settings"
+  },
+  "AccessDeniedPage": {
+    "title": "Get Out"
+  },
+  "RegisterPage": {
+    "title": "Create an account",
+    "username": "Username",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "register": "Register",
+    "error": "Error"
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "Change Language"
+  },
+  "NotFound": {
+    "title": "404 Page not found",
+    "pageDescription": " Oops! The page you are looking for does not exist.",
+    "goBackHome": "Go back to home page"
+  },
+  "AccessDenied": {
+    "title": "Access Denied",
+    "message": "You do not have permission to access this page.",
+    "homeLink": "Go to Homepage"
+  }
+}

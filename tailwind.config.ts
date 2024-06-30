@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        wave: {
+          "0%, 40%, 100%": { transform: "translateY(0)" },
+          "20%": { transform: "translateY(-10px)" },
+        },
+      },
+      animation: {
+        wave: "wave 1.2s infinite ease-in-out",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
