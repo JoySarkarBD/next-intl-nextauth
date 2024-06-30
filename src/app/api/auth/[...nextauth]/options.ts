@@ -41,8 +41,8 @@ const options: NextAuthOptions = {
       clientSecret: process.env.LINKEDIN_CLIENT_SECRET as string,
     }),
     Apple({
-      clientId: process.env.APPLE_ID,
-      clientSecret: process.env.APPLE_SECRET,
+      clientId: process.env.APPLE_ID as string,
+      clientSecret: process.env.APPLE_SECRET as string,
     }),
     Auth0({
       clientId: process.env.AUTH0_CLIENT_ID as string,
