@@ -16,9 +16,29 @@ import VK from "next-auth/providers/vk";
 import WordPress from "next-auth/providers/wordpress";
 import Zoom from "next-auth/providers/zoom";
 
+// Define an array of any object type
+const users: any[] = [
+  {
+    id: 1,
+    name: "Admin User",
+    email: "admin@example.com",
+    role: "admin",
+    username: "admin",
+    password: "admin",
+  },
+  {
+    id: 2,
+    name: "Regular User",
+    email: "user@example.com",
+    role: "user",
+    username: "user",
+    password: "user",
+  },
+];
+
 const options: NextAuthOptions = {
   providers: [
-    // List of authentication providers
+    // List of authentication providers...
 
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
@@ -95,26 +115,7 @@ const options: NextAuthOptions = {
           placeholder: "your-awesome-password",
         },
       },
-      async authorize(credentials: any) {
-        const users = [
-          {
-            id: 1,
-            name: "Admin User",
-            email: "admin@example.com",
-            role: "admin",
-            username: "admin",
-            password: "admin",
-          },
-          {
-            id: 2,
-            name: "Regular User",
-            email: "user@example.com",
-            role: "user",
-            username: "user",
-            password: "user",
-          },
-        ];
-
+      async authorize(credentials) {
         // Verify credentials
         const user = users.find(
           (user) =>
