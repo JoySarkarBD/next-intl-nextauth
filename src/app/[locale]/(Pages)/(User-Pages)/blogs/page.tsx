@@ -11,7 +11,13 @@ export const metadata: Metadata = {
     "Explore our collection of blog posts covering various topics. Stay informed with our latest updates and insights.",
 };
 
-export default function Page() {
+interface PageProps {
+  params: {
+    locale: string;
+  };
+}
+
+export default function Page({ params }: PageProps) {
   const t = useTranslations("BlogPage");
   const posts = use(getPosts());
 
@@ -31,7 +37,7 @@ export default function Page() {
                   {post.title}
                 </h2>
                 <p className='mt-2 text-gray-600'>{post.body}</p>
-                <Link href={`/blogs/${post.id}`}>
+                <Link href={`/${params.locale}/blogs/${post.id}`}>
                   <p className='mt-4 text-blue-600 hover:text-blue-800'>
                     {t("readMore")}
                   </p>

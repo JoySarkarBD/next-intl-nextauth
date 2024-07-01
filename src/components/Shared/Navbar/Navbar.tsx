@@ -14,12 +14,20 @@ interface Route {
 
 interface NavbarProps {
   routes?: Route[];
+  locale: string;
 }
 
-export default function Navbar({ routes }: NavbarProps) {
+export default function Navbar({ routes, locale }: NavbarProps) {
   const t = useTranslations("Navbar");
   const [isOpen, setIsOpen] = useState(false);
   const { data: session } = useSession();
+
+  // Filter routes to exclude login and register if session exists
+  const filteredRoutes = session
+    ? routes?.filter(
+        (route) => route.name !== t("login") && route.name !== t("register")
+      )
+    : routes;
 
   return (
     <nav className='bg-gray-800'>
@@ -70,39 +78,26 @@ export default function Navbar({ routes }: NavbarProps) {
           <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
             {/* Logo */}
             <div className='flex-shrink-0'>
-              <Link href='/'>
+              <Link href={`/${locale}`}>
                 <p className='text-white text-xl font-bold'>Your Logo</p>
               </Link>
             </div>
             {/* Links */}
             <div className='hidden sm:block sm:ml-6'>
               <div className='flex space-x-4'>
-                {routes?.map((route, index) => (
+                {filteredRoutes?.map((route, index) => (
                   <NavLink key={index} name={route.name} url={route.url} />
                 ))}
                 <LanguageSwitcher />
-                {session ? (
-                  <>
-                    <p>{session?.user?.name}</p>
+                {session && (
+                  <div className='flex items-center gap-5'>
+                    <p className='text-white'>{session?.user?.name}</p>
                     <button
                       className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium'
                       onClick={() => signOut()}>
                       {t("logout")}
                     </button>
-                  </>
-                ) : (
-                  <>
-                    <Link href='/login'>
-                      <p className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium'>
-                        {t("login")}
-                      </p>
-                    </Link>
-                    <Link href='/register'>
-                      <p className='ml-4 bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white px-4 py-2 rounded-md border border-blue-600 text-sm font-medium'>
-                        {t("register")}
-                      </p>
-                    </Link>
-                  </>
+                  </div>
                 )}
               </div>
             </div>
@@ -119,25 +114,15 @@ export default function Navbar({ routes }: NavbarProps) {
               <NavLink key={index} name={route.name} url={route.url} />
             ))}
             <LanguageSwitcher />
-            {session ? (
-              <button
-                className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium'
-                onClick={() => signOut()}>
-                {t("logout")}
-              </button>
-            ) : (
-              <>
-                <Link href='/login'>
-                  <p className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium'>
-                    {t("login")}
-                  </p>
-                </Link>
-                <Link href='/register'>
-                  <p className='ml-4 bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white px-4 py-2 rounded-md border border-blue-600 text-sm font-medium'>
-                    {t("register")}
-                  </p>
-                </Link>
-              </>
+            {session && (
+              <div className='flex-col items-center justify-between'>
+                <p className='text-white mb-3'>{session?.user?.name}</p>
+                <button
+                  className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium'
+                  onClick={() => signOut()}>
+                  {t("logout")}
+                </button>
+              </div>
             )}
           </div>
         </div>

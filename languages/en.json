@@ -63,7 +63,8 @@
   "NotFound": {
     "title": "404 Page not found",
     "pageDescription": " Oops! The page you are looking for does not exist.",
-    "goBackHome": "Go back to home page"
+    "goBackHome": "Go back to home page",
+    "goBackPrevious": "Go back to previous page"
   },
   "AccessDenied": {
     "title": "Access Denied",

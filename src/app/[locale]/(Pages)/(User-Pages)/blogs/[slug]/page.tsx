@@ -9,6 +9,7 @@ import { Suspense, use } from "react";
 interface PostPageProps {
   params: {
     slug: string;
+    locale: string;
   };
 }
 export async function generateMetadata({
@@ -34,7 +35,7 @@ export default function Page({ params }: PostPageProps) {
           <div className='bg-white shadow-md rounded-lg p-6'>
             <h1 className='text-3xl font-bold text-gray-900'>{post?.title}</h1>
             <p className='mt-4 text-gray-600'>{post?.body}</p>
-            <Link href='/blogs'>
+            <Link href={`/${params.locale}/blogs`}>
               <p className='mt-4 text-blue-600 hover:text-blue-800'>
                 {t("backToBlog")}
               </p>
