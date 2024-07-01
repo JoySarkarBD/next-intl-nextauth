@@ -1,5 +1,5 @@
 {
-  "name": "next-app-with-nextauth-and-internationalization",
+  "name": "nextauth-and-internationalization",
   "description": "This is a simple example of using next-intl for internationalization in Next.js",
   "version": "0.1.0",
   "private": true,
