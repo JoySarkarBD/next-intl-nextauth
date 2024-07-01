@@ -2,7 +2,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+### First, run this command to create new application
+
+```
+npx nextauth-and-next-intl@latest folder-name
+```
+
+### Then run the development server:
 
 ```bash
 npm run dev
