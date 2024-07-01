@@ -5,7 +5,7 @@
 export const getPosts = async () => {
   try {
     const response = await fetch(
-      "https://jsonplaceholder.typicode.com/posts?_limit=10",
+      "https://jsonplaceholder.typicode.com/posts?_limit=5",
       {
         method: "GET",
         cache: "force-cache",
