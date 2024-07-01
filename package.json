@@ -1,5 +1,6 @@
 {
   "name": "next-app-with-nextauth-and-internationalization",
+  "description": "This is a simple example of using next-intl for internationalization in Next.js",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,5 +25,10 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  }
+  },
+  "keywords": [
+    "next.js, typescript, next-auth, next-intl, internationalization, role-based routing"
+  ],
+  "license": "MIT",
+  "author": "Joy Sarkar"
 }
