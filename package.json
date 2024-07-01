@@ -1,9 +1,9 @@
 {
-  "name": "next-auth-intl",
+  "name": "next-auth-intl-starter",
   "description": "This is a simple example of using next-intl for internationalization in Next.js",
   "version": "0.1.0",
   "bin": {
-    "next-auth-intl": "bin/cli.js"
+    "next-auth-intl-starter": "bin/cli.js"
   },
   "homepage": "https://next-app-with-nextauth-and-internationalization.vercel.app",
   "repository": {

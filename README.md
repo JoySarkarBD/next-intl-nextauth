@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### First, run this command to create new application
 
 ```
-npx nextauth-and-next-intl@latest folder-name
+npx next-auth-intl-starter@latest folder-name
 ```
 
 ### Then run the development server:
