@@ -61,9 +61,42 @@ export default function Page() {
     }
   };
 
+  const users: any[] = [
+    {
+      id: 1,
+      name: "Admin User",
+      email: "admin@example.com",
+      role: "admin",
+      username: "admin",
+      password: "admin",
+    },
+    {
+      id: 2,
+      name: "Regular User",
+      email: "user@example.com",
+      role: "user",
+      username: "user",
+      password: "user",
+    },
+  ];
+
   return (
     <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-md w-full space-y-8'>
+        <div className='mt-8 space-y-6'>
+          <h3 className='text-center text-lg font-semibold text-gray-700'>
+            Dummy User Credentials
+          </h3>
+          <ul className='list-disc list-inside'>
+            {users.map((user) => (
+              <li key={user.id} className='text-gray-600'>
+                {user.role.charAt(0).toUpperCase() + user.role.slice(1)}:{" "}
+                {user.username} / {user.password}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div>
           <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>
             Log in to your account
