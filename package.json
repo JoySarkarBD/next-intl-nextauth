@@ -3,6 +3,10 @@
   "description": "This is a simple example of using next-intl for internationalization in Next.js",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://next-app-with-nextauth-and-internationalization.vercel.app",
+  "repository": {
+    "url": "https://github.com/JoySarkarBD/next-app-with-nextauth-and-internationalization"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
