@@ -1,7 +1,10 @@
 {
-  "name": "nextauth-and-next-intl",
+  "name": "next-auth-intl",
   "description": "This is a simple example of using next-intl for internationalization in Next.js",
   "version": "0.1.0",
+  "bin": {
+    "next-auth-intl": "bin/cli.js"
+  },
   "homepage": "https://next-app-with-nextauth-and-internationalization.vercel.app",
   "repository": {
     "url": "git+https://github.com/JoySarkarBD/next-app-with-nextauth-and-internationalization.git"
@@ -30,7 +33,7 @@
     "typescript": "^5"
   },
   "keywords": [
-    "next.js, typescript, next-auth, next-intl, internationalization, role-based routing"
+    "Next.js, Typescript, Next-Auth, Next-Intl, Internationalization, Role-based Routing"
   ],
   "license": "MIT",
   "author": "Joy Sarkar"
