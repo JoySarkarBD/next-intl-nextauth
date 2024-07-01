@@ -6,7 +6,7 @@
   "main": "/.next",
   "homepage": "https://next-app-with-nextauth-and-internationalization.vercel.app",
   "repository": {
-    "url": "https://github.com/JoySarkarBD/next-app-with-nextauth-and-internationalization"
+    "url": "git+https://github.com/JoySarkarBD/next-app-with-nextauth-and-internationalization.git"
   },
   "scripts": {
     "dev": "next dev",
