@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function RegisterPage() {
+export default function Page() {
   const t = useTranslations("RegisterPage");
   const { data: session, status } = useSession();
   const [error, setError] = useState<string | null>(null);

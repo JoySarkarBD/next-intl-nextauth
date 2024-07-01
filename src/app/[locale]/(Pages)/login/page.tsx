@@ -5,7 +5,7 @@ import { signIn, useSession } from "next-auth/react";
 import { useParams, useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
 
-export default function LoginPage() {
+export default function Page() {
   const { locale } = useParams();
   const router = useRouter();
   const [username, setUsername] = useState<string>("");

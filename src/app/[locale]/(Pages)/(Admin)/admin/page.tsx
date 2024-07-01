@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
-export default function AdminPage() {
+export default function Page() {
   const t = useTranslations("AdminPage");
 
   return (

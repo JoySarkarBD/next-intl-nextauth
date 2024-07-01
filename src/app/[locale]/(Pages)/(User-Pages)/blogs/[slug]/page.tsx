@@ -22,7 +22,7 @@ export async function generateMetadata({
   };
 }
 
-export default function PostPage({ params }: PostPageProps) {
+export default function Page({ params }: PostPageProps) {
   const t = useTranslations("BlogPage");
 
   const post = use(getPost(params.slug));

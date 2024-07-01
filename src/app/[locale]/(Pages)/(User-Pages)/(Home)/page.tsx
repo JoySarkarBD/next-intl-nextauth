@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-const IndexPage = () => {
+export default function Page() {
   const t = useTranslations("Index");
 
   return (
@@ -11,6 +11,4 @@ const IndexPage = () => {
       </div>
     </div>
   );
-};
-
-export default IndexPage;
+}
