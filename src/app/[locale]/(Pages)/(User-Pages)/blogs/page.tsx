@@ -37,7 +37,7 @@ export default function Page({ params }: PageProps) {
                   {post.title}
                 </h2>
                 <p className='mt-2 text-gray-600'>{post.body}</p>
-                <Link href={`/${params.locale}/blogs/${post.id}`}>
+                <Link href={`/blogs/${post.id}`}>
                   <p className='mt-4 text-blue-600 hover:text-blue-800'>
                     {t("readMore")}
                   </p>

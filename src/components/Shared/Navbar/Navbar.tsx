@@ -1,9 +1,9 @@
 "use client";
 
 import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
+import { Link } from "@/navigation";
 import { signOut, useSession } from "next-auth/react";
 import { useTranslations } from "next-intl";
-import Link from "@navigation";
 import { useState } from "react";
 import NavLink from "./NavLinks/NavLink";
 
@@ -25,7 +25,7 @@ export default function Navbar({ routes, locale }: NavbarProps) {
   // Filter routes to exclude login and register if session exists
   const filteredRoutes = session
     ? routes?.filter(
-        (route) => route.name !== t("login") && route.name !== t("register")
+        (route) => route.url !== "/login" && route.url !== "/register"
       )
     : routes;
 
@@ -78,7 +78,7 @@ export default function Navbar({ routes, locale }: NavbarProps) {
           <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
             {/* Logo */}
             <div className='flex-shrink-0'>
-              <Link href={`/${locale}`}>
+              <Link href='/'>
                 <p className='text-white text-xl font-bold'>Your Logo</p>
               </Link>
             </div>

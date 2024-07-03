@@ -50,14 +50,12 @@ export default function Page() {
     const res = await signIn("credentials", {
       username,
       password,
-      redirect: false,
+      callbackUrl,
     });
 
     // Handle sign-in response
     if (res?.error) {
       setError(res.error);
-    } else {
-      router.push(callbackUrl);
     }
   };
 

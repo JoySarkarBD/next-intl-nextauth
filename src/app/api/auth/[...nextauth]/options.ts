@@ -16,7 +16,16 @@ import VK from "next-auth/providers/vk";
 import WordPress from "next-auth/providers/wordpress";
 import Zoom from "next-auth/providers/zoom";
 
-const users: any[] = [
+export interface user {
+  id: number;
+  name: string;
+  email: string;
+  role: string;
+  username: string;
+  password: string;
+}
+
+const users: user[] = [
   {
     id: 1,
     name: "Admin User",
