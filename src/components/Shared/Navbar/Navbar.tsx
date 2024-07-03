@@ -14,10 +14,10 @@ interface Route {
 
 interface NavbarProps {
   routes?: Route[];
-  locale: string;
+  locale?: string;
 }
 
-export default function Navbar({ routes, locale }: NavbarProps) {
+export default function Navbar({ routes }: NavbarProps) {
   const t = useTranslations("Navbar");
   const [isOpen, setIsOpen] = useState(false);
   const { data: session } = useSession();
