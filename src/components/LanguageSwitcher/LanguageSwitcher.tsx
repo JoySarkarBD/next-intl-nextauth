@@ -1,6 +1,6 @@
 "use client";
-import { usePathname } from "@/navigation";
-import { useParams, useRouter } from "next/navigation";
+
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { useTransition } from "react";
 
 export default function LanguageSwitcher() {
