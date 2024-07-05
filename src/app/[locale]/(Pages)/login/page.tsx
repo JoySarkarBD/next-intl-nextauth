@@ -40,6 +40,8 @@ export default function Page() {
 
     const url = new URL(window.location.href);
 
+    const trimmedUsername = username.trim();  // Trim the username
+   
     // Determine callback URL based on current location
     const callbackUrl: string =
       url.href === `${url.origin}${url.pathname}`
@@ -48,14 +50,16 @@ export default function Page() {
 
     // Attempt to sign in with credentials
     const res = await signIn("credentials", {
-      username,
+      username: trimmedUsername,
       password,
-      callbackUrl,
+      redirect: false,
     });
 
     // Handle sign-in response
     if (res?.error) {
       setError(res.error);
+    }else{
+      router.push(callbackUrl)
     }
   };
 
