@@ -1,10 +1,9 @@
-// app/blog/[id]/page.tsx
-import LoadingPage from "@/app/loading";
 import { getPost } from "@/services/get-service";
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Suspense, use } from "react";
+import LoadingPage from "../../../loading";
 
 interface PostPageProps {
   params: {

@@ -1,9 +1,9 @@
 "use client";
 
-import LoadingPage from "@/app/loading";
 import { signIn, useSession } from "next-auth/react";
 import { useParams, useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
+import LoadingPage from "../loading";
 
 export default function Page() {
   const { locale } = useParams();
@@ -42,8 +42,8 @@ export default function Page() {
 
     const url = new URL(window.location.href);
 
-    const trimmedUsername = username.trim();  // Trim the username
-   
+    const trimmedUsername = username.trim(); // Trim the username
+
     // Determine callback URL based on current location
     const callbackUrl: string =
       url.href === `${url.origin}${url.pathname}`
@@ -61,9 +61,9 @@ export default function Page() {
     if (res?.error) {
       setError(res.error);
       setSubmittingState(false);
-    }else{
-      router.push(callbackUrl)
-      setSubmittingState(false)
+    } else {
+      router.push(callbackUrl);
+      setSubmittingState(false);
     }
   };
 
@@ -146,7 +146,11 @@ export default function Page() {
             <button
               type='submit'
               disabled={submittingState}
-              className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium ${setSubmittingState ? 'text-gray-300 bg-blue-900' : 'text-white bg-blue-600 hover:bg-blue-700'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}>
+              className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium ${
+                setSubmittingState
+                  ? "text-gray-300 bg-blue-900"
+                  : "text-white bg-blue-600 hover:bg-blue-700"
+              } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}>
               Log in
             </button>
           </div>

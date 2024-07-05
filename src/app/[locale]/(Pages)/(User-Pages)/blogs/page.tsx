@@ -1,9 +1,9 @@
-import LoadingPage from "@/app/loading";
 import { getPosts } from "@/services/get-service";
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Suspense, use } from "react";
+import LoadingPage from "../../loading";
 
 export const metadata: Metadata = {
   title: "Blogs",

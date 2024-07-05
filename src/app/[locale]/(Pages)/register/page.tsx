@@ -1,10 +1,10 @@
 "use client";
 
-import LoadingPage from "@/app/loading";
 import { useSession } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import LoadingPage from "../loading";
 
 export default function Page() {
   const t = useTranslations("RegisterPage");
