@@ -8,6 +8,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 export default function Page() {
   const { locale } = useParams();
   const router = useRouter();
+  const [submittingState, setSubmittingState] = useState<boolean>(false);
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
@@ -36,6 +37,7 @@ export default function Page() {
   // Handle form submission
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmittingState(true);
     setError(null);
 
     const url = new URL(window.location.href);
@@ -58,8 +60,10 @@ export default function Page() {
     // Handle sign-in response
     if (res?.error) {
       setError(res.error);
+      setSubmittingState(false);
     }else{
       router.push(callbackUrl)
+      setSubmittingState(false)
     }
   };
 
@@ -141,7 +145,8 @@ export default function Page() {
           <div>
             <button
               type='submit'
-              className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'>
+              disabled={submittingState}
+              className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium ${setSubmittingState ? 'text-gray-300 bg-blue-900' : 'text-white bg-blue-600 hover:bg-blue-700'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}>
               Log in
             </button>
           </div>
